@@ -1,5 +1,10 @@
-# pipeline-genomes
+# pipeline-pyparanoid
 
-Pipeline for downloading (NCBI or local), evaluating, and organizing a
-collection of genomes.
+Pipeline for running
+[PyParanoid](https://github.com/ryanmelnyk/PyParanoid) on a suite of
+genomes.
+
+FIXME: finish writing.
+
+
 
