@@ -1,0 +1,34 @@
+# http://www.microbesonline.org/fasttree/
+---
+image: pvstodghill/fasttree
+version: 2.1.11__2022-08-24
+commands:
+  - FastTree
+  - FastTreeDbl
+  - FastTreeMP
+
+# https://github.com/JLSteenwyk/ClipKIT
+# https://bioconda.github.io/recipes/clipkit/README.html
+---
+image: pvstodghill/clipkit
+version: 1.3.0__2022-09-07
+commands:
+  - clipkit
+
+# http://molevol.cmima.csic.es/castresana/Gblocks.html
+# https://bioconda.github.io/recipes/gblocks/README.html
+---
+image: pvstodghill/gblocks
+version: 0.91b__2020-10-16
+commands:
+  - Gblocks
+
+# https://github.com/ryanmelnyk/PyParanoid
+---
+image: pvstodghill/pyparanoid
+version: 0.4.1__2021-12-03
+commands:
+  - BuildGroups.py
+  - IdentifyOrthologs.py
+  - PropagateGroups.py
+
