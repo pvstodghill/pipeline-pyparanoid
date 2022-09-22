@@ -26,7 +26,7 @@ for THRESHOLD in ${TREE_THRESHOLDS} ; do
     # ------------------------------------------------------------------------
 
     echo 1>&2 '# Making local copy of master alignment'
-    if [ ! -s ${PHYLO}/orthos.txt ] ; then
+    if [ ! -s ${ORTHOS}/${THRESHOLD}/orthos.txt ] ; then
 	echo 1>&2 "# Empty master alignment! Skipping..."
 	continue
     fi
