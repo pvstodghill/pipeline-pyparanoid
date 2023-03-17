@@ -96,3 +96,4 @@ export LC_ALL=C
 PYP=${DATA}/1_pyp
 ORTHOS=${DATA}/2_orthos
 TREES=${DATA}/3_trees
+PANGENOMES=${DATA}/4_pangenomes
