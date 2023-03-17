@@ -26,12 +26,12 @@ USE_GBLOCKS=no # use ClipKIT for trimming master alignments
 
 # ------------------------------------------------------------------------
 
-# # Uncomment to get packages from HOWTO
-# PACKAGES_FROM=howto
+# Uncomment to get packages from HOWTO
+PACKAGES_FROM=howto
 
-# uncomment to use conda
-PACKAGES_FROM=conda
-CONDA_ENV=pipeline-pyparanoid
+# # uncomment to use conda
+# PACKAGES_FROM=conda
+# CONDA_ENV=pipeline-pyparanoid
 
 #THREADS=$(nproc --all)
 
