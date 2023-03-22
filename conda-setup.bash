@@ -2,11 +2,12 @@
 
 set -e
 
+NAME=pipeline-pyparanoid
+
 CONDA_PREFIX=$(dirname $(dirname $(type -p conda)))
 . "${CONDA_PREFIX}/etc/profile.d/conda.sh"
 
 PACKAGES=
-
 PACKAGES+=" pip"
 
 PACKAGES+=" cd-hit" # =4.8.1
@@ -19,12 +20,28 @@ PACKAGES+=" fasttree"
 PACKAGES+=" gblocks"
 PACKAGES+=" clipkit"
 
-set -x
+if [ "$(type -p mamba)" ] ; then
+    _conda="mamba --no-banner"
+else
+    _conda=conda
+fi
 
-conda env remove -y --name pipeline-pyparanoid
-conda create -y --name pipeline-pyparanoid
-conda activate pipeline-pyparanoid
+function __ {
+    echo + "$@"
+    eval "$@"
+}
 
-conda install -y ${PACKAGES}
+if [ "$1" = -f ] ; then
+    __ conda env remove -y --name ${NAME}
+fi
 
-pip install pyparanoid
+_install=update
+if [ ! -d ${CONDA_PREFIX}/envs/${NAME} ] ; then
+    __ conda create -y --name ${NAME}
+    _install=install
+fi
+__ conda activate ${NAME}
+
+__ $_conda $_install -y ${PACKAGES}
+
+__ pip $_install pyparanoid
