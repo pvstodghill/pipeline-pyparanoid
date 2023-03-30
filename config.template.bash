@@ -6,6 +6,11 @@
 
 GENOMES=FIXME # path to directory full of STRAIN1.faa, STRAIN2,faa, ...
 
+# # Genomes to remove before processing
+# OUTGROUPS=
+# OUTGROUPS+=" Name1"
+# OUTGROUPS+=" Name2"
+
 # ------------------------------------------------------------------------
 
 ## "minimum size of groups, defaults to 2 which ignores singletons,

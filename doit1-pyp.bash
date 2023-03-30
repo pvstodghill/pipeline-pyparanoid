@@ -20,6 +20,10 @@ mkdir -p ${PYP}/core-genomes/pep
 	name=$(basename $f .faa)
 	cp $f ${PYP}/core-genomes/pep/${name}.pep.fa
     done
+
+    for name in ${OUTGROUPS} ; do
+	rm -f ${PYP}/core-genomes/pep/${name}.pep.fa
+    done
 )
 
 sed -E -i -e 's/^>gnl\|[a-zA-Z0-9]+\|/>/' ${PYP}/core-genomes/pep/*.pep.fa
