@@ -6,7 +6,7 @@ FROM pvstodghill/pvs-conda-base:latest
 MAINTAINER Paul Stodghill <paul.stodghill@usda.gov>
 
 # Image meta-data
-ENV PACKAGE pipeline-FIXME
+ENV PACKAGE pipeline-pyparanoid
 
 # Install more required packages
 # RUN apt-get install --yes FIXME
